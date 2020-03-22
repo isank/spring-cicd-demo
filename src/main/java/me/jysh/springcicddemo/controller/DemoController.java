@@ -11,4 +11,9 @@ public class DemoController {
   public ResponseEntity<String> getGreeted() {
     return ResponseEntity.ok("Hi! Welcome to my World!");
   }
+
+  @GetMapping("/v2/cheer")
+  public ResponseEntity<String> getCheer() {
+    return ResponseEntity.ok("Hi! Hope you have an amazing day!!");
+  }
 }
