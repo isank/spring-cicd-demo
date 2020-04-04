@@ -37,5 +37,5 @@ jobs:
       - name: Publish artifact to Github Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: cd && ./gradlew publish
+        run: pwd && ./gradlew publish
   
