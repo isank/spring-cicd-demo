@@ -1,4 +1,4 @@
-name: CI
+name: Master Flow
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    name: TEST - Gradle Build
+    name: Test - Gradle Build
     runs-on: [ubuntu-18.04]
 
     steps:
@@ -32,6 +32,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - name: Publish artifact to Github Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
